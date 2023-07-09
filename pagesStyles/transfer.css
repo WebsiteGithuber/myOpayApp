@@ -1,0 +1,164 @@
+.transfer_wrapper {
+    display: none;
+    width: min(100%, 360px);
+    height: 100%;
+    margin-inline: auto;
+    background-color: var(--secondary-color);
+    border-radius: 40px;
+    transform: translate(0, -32%);
+    border: 1px solid transparent;
+    position: relative;  
+    box-shadow: inset 1px 1px 15px var(--shadow-color);
+    animation: addMoney .3s linear;
+}
+
+.transfer_wrapper .box {
+    width: 80%;
+    height: 80px;
+    margin: auto;
+    border: 1px solid var(--shadow-color);
+    border-radius: 5px;
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.transfer_wrapper .opay_lister  {
+    width: 40px;
+    height: 100%;
+    border-radius: 50%;
+    border: 2px solid transparent;
+    background: url(/images/opay-removebg-preview.png);
+    background-color: var(--secondary-color);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    margin-left: 5px;
+}
+.transfer_wrapper .other_lister {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    border: 2px solid transparent;
+    background: url(/images/other.png);
+    background-color: var(--secondary-color);
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    margin-left: 5px;
+}
+.transfer_wrapper .scanner_lister {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    border: 2px solid transparent;
+    background: url(/images/scanner.png);
+    background-position: center;
+    background-size: cover;
+    background-color: var(--secondary-color);
+    filter: saturate(1);
+    background-repeat: no-repeat;
+    margin-left: 5px;
+}
+.transfer_wrapper .box div {
+    display: flex;
+    flex-direction: column;
+}
+
+.transfer_wrapper .box i {
+    font-size: 20px;
+    padding: 10px;
+    color: var(--primary-color);
+}
+
+.transfer_wrapper .box h4 {
+    font-family: Roboto, sans-serif;
+    color: var(--primary-color);
+    font-size: 12px;
+}
+
+.transfer_wrapper .box p {
+    font-size: 12px;
+    color: var(--primary-color);
+}
+
+.transfer_wrapper .box span {
+    background-color: red;
+    color: white;
+    font-size: 10px;
+    border-radius: 5px;
+    padding-left: 5px;
+    padding-right: 5px;
+    position: absolute;
+    margin-top: -5px;
+    margin-left: 5px;
+    font-weight: lighter;
+}
+.myads {
+    height: 150px;
+    width: 90%;
+    margin: auto;
+    border: 1px solid var(--shadow-color);
+    margin-top: 40px;
+    border-radius: 10px;
+    background: var(--shadow-color);
+    display: flex;
+    flex-direction: row;
+    padding: 5px;
+    justify-content: space-between;
+}
+
+.myads .subs_details {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+
+.myads .subs_details h1 {
+    font-family: Roboto, sans-serif;
+    font-size: 20px;
+    color: var(--primary-color);
+}
+.myads .subs_details h1 span {
+    font-family: Monoton, sans-serif;
+    background: linear-gradient(-45deg, yellow 50%, red 50% );
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+}
+.myads .subs_details button {
+    width: 100px;
+    font-family: orbitron, sans-serif;
+    font-weight: bold;
+    border-radius: 10px;
+    height: 30px;
+    background-color: transparent;
+    margin-top: 2px;
+   
+    border: 1px solid transparent;
+    color: var(--primary-color);
+}
+.myads .links {
+    display: flex;
+    border: 1px solid transparent;
+    justify-content: space-between;
+    height: 40px;
+    align-items: center;
+    margin-left: 30px;
+    gap: 5px;
+
+}
+.myads .links i {
+    font-size: 30px;
+}
+.myads .image {
+    width: 190px;
+    height: 100%;
+    background-color:yellow;
+    border-radius: 10px;
+    border: 1px solid transparent;
+    background-size: cover;
+    clip-path: polygon(0 0%, 100% 200%, 100% 10%);
+    overflow: hidden;
+}

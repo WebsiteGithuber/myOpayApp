@@ -1,0 +1,483 @@
+@import url('https://fonts.googleapis.com/css2?family=Caprasimo&family=Monoton&family=Orbitron:wght@400;500;600&family=Roboto&display=swap');
+:root {
+    --main-color: rgb(14, 185, 103);
+    --secondary-color: white;
+    --primary-color: black;
+    --border-color: rgba(195, 246, 221, 0.984);
+    --light-green: rgb(231, 255, 246);
+    --shadow-color: rgba(75, 75, 75, 0.379);
+}
+.dark-mode {
+    --primary-color: white;
+    --secondary-color: black;
+    --shadow-color: rgba(51, 50, 50, 0.909);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+body {
+    width: 100%;
+    background-color: var(--secondary-color);
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 888px;
+    user-select: none;
+}
+
+.opay {
+    height: 800px;
+    width: min(80%, 1000px);
+    border-radius: 40px;
+    background-color: var(--secondary-color);
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.opay::before {
+    content: '';
+    position: absolute;
+    background-color: var(--secondary-color);
+    height: 780px;
+    width: min(78%, 980px);
+    border-radius: 40px;
+    border: 2px solid var(--primary-color);
+    opacity: .5;
+    margin-inline: auto;
+}
+
+.app {
+    width: min(95%, 360px);
+    height: 90%;
+    margin-inline: auto;
+    background-color: var(--secondary-color);
+    border-radius: 40px;
+    border: 1px solid transparent;
+    transform: translate(0%, 0%);
+    box-shadow: inset 1px 1px 15px var(--shadow-color);
+    overflow: hidden;
+}
+
+.header {
+    height: 50px;
+    width: 80%;
+    margin: auto;
+    display: flex;
+    flex-direction: row;
+    margin-top: 20px;
+}
+
+.header .profile {
+    width: 55%;
+    height: 100%;
+
+}
+
+.header .profile .profile_pics {
+    background: url(/images/prof.jpg);
+    width: 40px;
+    height: 40px;
+    background-position: center;
+    background-size: cover;
+    overflow: hidden;
+    border-radius: 50%;
+    border: 2px solid var(--main-color);
+    display: flex;
+    flex-direction: row;
+    color: black;
+    margin-top: 10px;
+}
+
+.profile .greetings {
+    margin-top: -40px;
+    width: 50px;
+    margin-left: 45px;
+    color: var(--primary-color);
+}
+
+.profile .greetings p {
+    font-size: 12px;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    margin-top: 5px;
+    color: var(--primary-color);
+}
+
+.header_list {
+    display: flex;
+    list-style: none;
+    justify-content: space-between;
+    position: relative;
+    right: 0;
+    width: 40%;
+    align-items: center;
+
+}
+
+.header_list li i {
+    font-size: 20px;
+    color: var(--primary-color);
+    opacity: .7;
+    cursor: pointer;
+}
+
+.shortcut_container {
+    width: 80%;
+    margin: auto;
+    margin-top: 10px;
+    height: 150px;
+    border-radius: 5px;
+    padding: 10px;
+    background: var(--main-color);
+
+}
+
+.shortcut_header {
+    width: 90%;
+    height: 50px;
+    display: flex;
+    justify-content: space-between;
+    margin: auto;
+    border: 1px solid transparent;
+}
+
+.shortcut_header a {
+    text-decoration: none;
+    color: var(--secondary-color);
+    font-size: 8px;
+    font-family: Roboto, sans-serif;
+    display: flex;
+    width: 50%;
+    height: 20px;
+}
+
+.shortcut_header .total_balance{
+    display: flex;
+    flex-direction: column;
+}
+.shortcut_header .total_balance div{
+    display: flex;
+    flex-direction: row;
+}
+.shortcut_header .total_balance .balance {
+    display: none;
+    font-family: Roboto, sans-serif;
+    font-size: 15px;
+    margin-top: 5px;
+    color: var(--secondary-color);
+}
+
+.shortcut_header a i {
+    font-size: 15px;
+    margin-left: 5px;
+    cursor: pointer;
+}
+
+.shortcut_header a p {
+    padding-right: 5px;
+    font-size: 10px;
+    opacity: .9;
+    font-family: Roboto, sans-serif;
+}
+
+.shortcut {
+    width: 90%;
+    display: flex;
+    flex-direction: row;
+    height: 80px;
+    margin: auto;
+}
+
+.shortcut .shortcut_list {
+    display: flex;
+    list-style: none;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.shortcut_list li {
+    width: 70px;
+    text-align: center;
+
+}
+
+.shortcut_list li i {
+    width: 100%;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 35px;
+    background-color: var(--secondary-color);
+    color: var(--main-color);
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.shortcut_list li p {
+    font-size: 12px;
+    font-family: Roboto, sans-serif;
+    margin-top: 5px;
+    color: var(--secondary-color);
+}
+
+.payment_box {
+    height: 400px;
+    width: 100%;
+    border: 2px solid transparent;
+    border-radius: 10px;
+    margin-top: 10px;
+
+}
+
+.payment_box h1 {
+    font-size: 15px;
+    margin-left: -10px;
+    font-family: Roboto, sans-serif;
+    padding: 5px;
+    color: var(--primary-color);
+    opacity: .9;
+    
+}
+
+.payment_box .payment_wrapper {
+    border: 1px solid var(--shadow-color);
+    border-radius: 10px;
+}
+
+.payment_box ul {
+    margin: auto;
+    list-style: none;
+    margin-bottom: 10px;
+    width: 100%;
+    border: 2px solid transparent;
+    display: flex;
+    justify-content: space-between;
+}
+.payment_box ul li {
+    width: 50px;
+    flex-direction: column;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 2px solid transparent;
+    cursor: pointer;
+}
+.payment_box ul li i {
+    height: 40px;
+    width: 40px;
+    border-radius: 50%;
+    border: 1.5px solid var(--main-color);
+    background-color: var(--light-green);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 25px;
+    color: var(--main-color);
+    opacity: .8;
+}
+.payment_box ul li p {
+    font-size: 11px;
+    text-align: center;
+    margin-top: 5px;
+    font-family: Roboto, sans-serif;
+    color: var(--primary-color);
+    opacity: .8;
+}
+
+.payment_box .ads {
+    border: 2px solid transparent;
+    margin-top: 5px;
+}
+
+.payment_box .ads .box {
+    width: 100%;
+    margin-bottom: 4px;
+    height: 70px;
+    border: 2px solid var(--shadow-color);
+    border-radius: 10px;
+}
+.payment_box .ads .box:nth-child(1) {
+    background: url(/images/myad.png);
+    background-size: cover;
+    height: 120px !important;
+    opacity: .7;
+}
+
+.payment_box .ads .box:nth-child(2) {
+    background: url(/images/opayad2.jpg);
+    background-size: contain;
+    animation: ad_changer 10s  infinite;
+}
+
+@keyframes ad_changer {
+    0% {
+        background: url(/images/opayad2.jpg);
+        background-size: contain;
+    }
+    100% {
+        background: url(/images/opayad1.jpg);
+        background-size: contain;
+        
+    }
+}
+.bottom_bar {
+    border: 2px solid transparent;
+    display: flex;
+    flex-direction: row;
+    height: 50px;
+    width: 100%;
+}
+
+.bottom_bar ul {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.bottom_bar ul li {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    border: 1px solid transparent;
+    width: 50px;
+    align-items: center;
+    cursor: pointer;
+}
+
+.bottom_bar ul li i {
+    font-size: 30px;
+    font-weight: lighter;
+    opacity: .5;
+    color: var(--primary-color);
+}
+.bottom_bar ul li p {
+    font-family: Roboto, sans-serif;
+    font-size: 12px;
+    opacity: .7;   
+    color: var(--primary-color);           ;
+}
+
+.bottom_bar ul li:first-child p{
+    color: var(--main-color);
+    opacity: 1 !important;
+}
+
+.bottom_bar ul li:first-child i {
+    color: var(--secondary-color);
+    opacity: 1 !important;
+    font-size: 20px;
+    border: 2px solid var(--main-color);
+    background-color: var(--main-color);
+    border-radius: 20px;
+    
+}
+ hr {
+    color: var(--primary-color);
+    opacity: .2;
+}
+
+/* Shared CSS Properties */
+
+@keyframes addMoney {
+    0% {
+        left: 100%;
+    }
+    50% {
+        left: 50%;
+    }
+    100% {
+        left: 0%;
+    }
+}
+
+.previousbtn {
+    height: 80px;
+    width: 100%;
+    border-top-left-radius: 40px;
+    border-top-right-radius: 40px;
+    display: flex;
+    flex-direction: row;
+    padding-top: 25px;
+    padding-left: 10px;
+    opacity: .9;
+    cursor: pointer;
+
+}
+
+ hr {
+    width: 90%;
+    color: var(--shadow-color);
+    margin: auto;
+    margin-bottom: 10px;
+}
+.previousbtn i {
+    font-size: 40px;
+    color: var(--primary-color);
+}
+
+.previousbtn h1 {
+    font-size: 20px;
+    font-family: Roboto, sans-serif;
+    margin-top: 7px;
+    color: var(--primary-color);
+
+}
+
+.bottom_layer {
+    height: 150px;
+    width: 100%;
+    margin-top: 60px;
+    background-color: var(--main-color);
+    bottom: 0;
+    position: absolute;
+    display: flex;
+    justify-content: center;
+}
+.bottom_layer::after {
+    content: '';
+    width: 100%;
+    position: relative;
+    height: 10px;
+    background-color: var(--secondary-color);
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+    margin-top: -3px;
+}
+.bottom_layer .image {
+    width: 100px;
+    height: 100px;
+    border: 2px solid transparent;
+    position: absolute;
+    margin-top: 30px;
+    background-color: var(--secondary-color);
+    border-radius: 20px;
+    /* background: url(/images/opay-removebg-preview.png); */
+    background-size: contain;
+}
+.bottom_layer .image img {
+    width: 100%;
+}
+.bottom_layer h1 {
+    position: absolute;
+    font-size: 12px;
+    margin-top: 100px;
+    font-family: Roboto, sans-serif;
+    color: var(--primary-color);
+}
+
+.boxHoverEffect {
+    transition: .5s ease-in-out;
+    background-color: var(--secondary-color);
+}
+.boxHoverEffect:hover {
+    border-color: var(--main-color) !important;
+}
+

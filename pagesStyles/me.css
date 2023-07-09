@@ -1,0 +1,160 @@
+.me_wrapper {
+    display: none;
+    width: min(100%, 360px);
+    height: 100%;
+    margin-inline: auto;
+    background-color: var(--secondary-color);
+    border-radius: 40px;
+    transform: translate(0, -32%);
+    border: 1px solid transparent;
+    position: relative;  
+    box-shadow: inset 1px 1px 15px var(--shadow-color);
+    animation: addMoney .3s linear;
+}
+
+.me_wrapper::before {
+    content: '';
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: ;
+    right: 0;
+    z-index: -1;
+    height: 70%;
+    border-top-left-radius: 1000px;
+    bottom: 0;
+    background-color: var(--main-color);
+    position: absolute;
+    box-shadow: 1px 1px 15px var(--shadow-color);
+}
+
+.me_wrapper .previousbtn {
+    display: flex;
+    flex-direction: row;
+
+}
+.me_wrapper .greetings {
+    width: 50px;
+    margin-left: 10px;
+    color: var(--primary-color);
+}
+
+.me_wrapper .greetings p {
+    font-size: 20px;
+    font-family: Orbitron, sans-serif;
+    font-weight: light;
+    border: 2px solid transparent;
+    width: 250px;
+    background: linear-gradient(045deg, var(--primary-color) 050%, var(--main-color) 50%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+}
+.me_wrapper .profile_pics {
+    background: url(/images/prof.jpg);
+    width: 40px;
+    height: 40px;
+    margin-left: 30px;
+    background-position: center;
+    background-size: cover;
+    overflow: hidden;
+    border-radius: 50%;
+    border: 2px solid var(--main-color);
+    display: flex;
+    flex-direction: row;
+    color: black;
+    margin-top: 10px;
+}
+.me_wrapper .exitBtn {
+    position: absolute;
+    right: 20px;
+    top: 20px;
+    font-size: 10px;
+    border-radius: 50%;
+    transition: 1s ease-in-out;
+}
+.me_wrapper .exitBtn:hover {
+    transform: rotate(360deg);
+}
+.me_wrapper .exitBtn i {
+    font-size: 25px;
+    color: red !important;
+}
+
+.me_wrapper .profile {
+    border: 2px solid red;
+}
+
+.me_wrapper .box {
+    width: 80%;
+    height: 60px;
+    margin: auto;
+    border: 1px solid var(--shadow-color);
+    border-radius: 5px;
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.me_wrapper .lister  {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    border: 2px solid transparent;
+    background-color: transparent;
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    margin-left: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.me_wrapper .lister i {
+    font-size: 25px !important;
+    color: var(--main-color) !important;
+}
+
+.me_wrapper i {
+    color: var(--main-color) !important;
+}
+.me_wrapper .box .list {
+    display: flex;
+    flex-direction: column;
+    border: 2px solid transparent;
+    border-radius: 20px;
+    width: 180px;
+
+}
+
+.me_wrapper .box i {
+    font-size: 20px;
+    padding: 10px;
+    color: var(--primary-color);
+}
+
+.me_wrapper .box h4 {
+    font-family: Roboto, sans-serif;
+    color: var(--primary-color);
+    font-size: 12px;
+}
+.me_wrapper .box p {
+    font-size: 12px;
+    color: var(--primary-color);
+}
+
+.me_wrapper .bottom_layer {
+    background-color:transparent ;
+}
+
+.me_wrapper .bottom_layer::after {
+    display: none;
+}
+
+.me_wrapper .bottom_layer h1 {
+    font-size: 30px;
+    color: var(--secondary-color);
+    font-family: Monoton, sans-serif;
+    font-weight: lighter;
+}

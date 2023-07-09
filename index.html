@@ -1,0 +1,431 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OPay</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="/pagesStyles/add_money.css">
+    <link rel="stylesheet" href="/pagesStyles/transfer.css">
+    <link rel="stylesheet" href="/pagesStyles/me.css">
+    <link rel="stylesheet" href="/pagesStyles/withdraw.css">
+    <link rel="stylesheet" type="text/css" href="your_website_domain/css_root/flaticon.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+</head>
+
+<body>
+    <div class="opay">
+        <div class="app">
+            <div class="header">
+                <div class="profile">
+                    <div class="profile_pics"></div>
+                    <div class="greetings">
+                        <b style="font-family: cursive;">Hello,</b>
+                        <p> @WebsiteTiktoker</p>
+                    </div>
+                </div>
+                <ul class="header_list">
+                    <li><i class='bx bxs-moon toogle-icon'></i></li>
+                    <li><i class='bx bx-user'></i></li>
+                    <li><i class='bx bx-scan'></i></li>
+                    <li><i class='bx bx-bell'></i></li>
+                </ul>
+            </div>
+            <div class="shortcut_container">
+                <div class="shortcut_header">
+                    <a href="#" class="total_balance" onclick="getBalance()">
+                        <div>
+                            <p>Total Balance </p>
+                            <i class='bx bx-hide toggle-icon'></i>
+                        </div>
+                        <div id="balance" class="balance">
+                            10k Followers
+                        </div>
+                    </a>
+                    <a href="#">
+                        <p>Transaction History</p>
+                        <i class='bx bx-chevron-right'></i>
+                    </a>
+                </div>
+                <div class="shortcut">
+                    <ul class="shortcut_list">
+                        <li onclick="getAddMoneyMenu()">
+                            <i class='bx bx-plus'></i>
+                            <p>Add money</p>
+                        </li>
+                        <li onclick="getTransferMenu()">
+                            <i class='bx bx-transfer-alt'></i>
+                            <p>Transfer</p>
+                        </li>
+                        <li onclick="getWithdrawMenu()">
+                            <i class='bx bx-trending-up'></i>
+                            <p>Withdraw</p>
+                        </li>
+
+                    </ul>
+                </div>
+                <div class="payment_box">
+                    <h1>Payment</h1>
+
+                    <div class="payment_wrapper">
+                        <ul>
+
+                            <li>
+                                <i class='bx bx-mobile'></i>
+                                <p>Airtime</p>
+                            </li>
+                            <li>
+                                <i class='bx bx-mobile-alt'></i>
+                                <p>Data</p>
+                            </li>
+                            <li>
+                                <i class='bx bx-money-withdraw'></i>
+                                <p>Billing</p>
+                            </li>
+                            <li>
+                                <i class='bx bxs-slideshow'></i>
+                                <p>TV</p>
+                            </li>
+                        </ul>
+                        <ul>
+
+                            <li>
+                                <i class='bx bx-bulb'></i>
+                                <p>Electricity</p>
+                            </li>
+                            <li>
+                                <i class='bx bx-broadcast'></i>
+                                <p>Internet</p>
+                            </li>
+                            <li>
+                                <i class='bx bxs-graduation'></i>
+                                <p>SchoolExam</p>
+                            </li>
+                            <li>
+                                <i class='bx bxs-grid'></i>
+                                <p>More</p>
+                            </li>
+
+                        </ul>
+                    </div>
+                    <div class="ads">
+                        <div class="box"></div>
+                        <div class="box"></div>
+                    </div>
+                </div>
+                <hr>
+                <div class="bottom_bar">
+                    <ul>
+                        <li>
+                            <i class='bx bxl-pinterest-alt'></i>
+                            <p>Home</p>
+                        </li>
+                        <li>
+                            <i class='bx bx-crown'></i>
+                            <p>Rewards</p>
+                        </li>
+                        <li>
+                            <i class='bx bx-objects-vertical-bottom'></i>
+                            <p>Finance</p>
+                        </li>
+                        <li>
+                            <i class='bx bx-credit-card'></i>
+                            <p>Cards</p>
+                        </li>
+                        <li onclick="getMeMenu()">
+                            <i class='bx bx-smile'></i>
+                            <p>Me</p>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="add_money_wrapper" id="addMoneyMenu">
+                <div class="previousbtn" onclick="exitAddMoneyMenu()">
+                    <i class='bx bx-chevron-left'></i>
+                    <h1>Add Money</h1>
+                </div>
+                <hr>
+                <div class="box boxHoverEffect">
+                    <div class="opay_lister">
+
+                    </div>
+
+                    <div>
+                        <h4>Bank Transfer</h4>
+                        <p>Add money via mobile or internet <br> banking</p>
+
+                    </div>
+                    <i class='bx bx-chevron-right'></i>
+                </div>
+                <div class="ac_number_wrapper">
+                    <div class="ac_number">
+                        <p>OPay Account Number</p>
+                        <h2>000 000 0000</h2>
+                    </div>
+                    <button>Copy <i class='bx bx-copy'></i></button>
+
+                </div>
+                <div class="box boxHoverEffect">
+                    <div class="opay_lister">
+
+                    </div>
+
+                    <div>
+                        <h4>Top-up with card/account</h4>
+                        <p>Add money directly from your bank <br> cared or account</p>
+
+                    </div>
+                    <i class='bx bx-chevron-right'></i>
+                </div>
+                <div class="box boxHoverEffect">
+                    <div class="opay_lister">
+
+                    </div>
+
+                    <div>
+                        <h4>Cash Deposit</h4>
+                        <p>Find your account with nearbly mer<br>chant's</p>
+
+                    </div>
+                    <i class='bx bx-chevron-right'></i>
+                </div>
+                <div class="box boxHoverEffect">
+                    <div class="opay_lister">
+
+                    </div>
+
+                    <div>
+                        <h4>Scan my QR Code</h4>
+                        <p>Show QR code to any OPay user</p>
+
+                    </div>
+                    <i class='bx bx-chevron-right'></i>
+                </div>
+                <div class="bottom_layer">
+                    <div class="image">
+                        <img src="/images/opay-removebg-preview.png" alt="">
+                    </div>
+                    <h1>Opay</h1>
+                </div>
+            </div>
+            <div class="transfer_wrapper" id="transferMenu">
+                <div class="previousbtn" onclick="exitTransferMenu()">
+                    <i class='bx bx-chevron-left'></i>
+                    <h1>Transfer</h1>
+                </div>
+                <hr>
+                <div class="box boxHoverEffect">
+                    <div class="opay_lister">
+                    </div>
+
+                    <div>
+                        <h4>To OPay Account <span>Instant & Free</span></h4>
+                        <p>Free instant transfers with zero <br> issues</p>
+
+                    </div>
+                    <i class='bx bx-chevron-right'></i>
+                </div>
+                <div class="box boxHoverEffect">
+                    <div class="other_lister">
+                    </div>
+
+                    <div>
+                        <h4>To Other Bank Account</h4>
+                        <p>Transfers to other bank accounts<br> are free</p>
+
+                    </div>
+                    <i class='bx bx-chevron-right'></i>
+                </div>
+                <div class="box boxHoverEffect">
+                    <div class="scanner_lister">
+                    </div>
+
+                    <div>
+                        <h4>Scan QR Code <span>Free</span></h4>
+                        <p>Scan QR Code to make transfers <br>Opay accounts</p>
+
+                    </div>
+                    <i class='bx bx-chevron-right'></i>
+                </div>
+                <div class="myads">
+                    <div class="subs_details">
+                        <h1>Am a <span>Website<br> Developer</span></h1>
+                        <button>Follow me...</button>
+
+                        <div class="links">
+                            <a href="https://www.tiktok.com/@websitetiktoker?"><i style="color: black;"
+                                    class='bx bxl-tiktok'></i></a>
+                            <a href="https://youtube.com/@WebsiteYoutuber"><i style="color: red;"
+                                    class='bx bxl-youtube'></i></a>
+                            <a href=""><i style="color: rgb(0, 255, 255);" class='bx bxl-facebook'></i></a>
+                            <a href="https://github.com/WebsiteGithuber"><i style="color: black;"
+                                    class='bx bxl-github'></i></a>
+                        </div>
+
+                    </div>
+                    <div class="image">
+                        <img src="/images/image.png" alt="image">
+                    </div>
+                </div>
+                <div class="bottom_layer">
+                    <div class="image">
+                        <img src="/images/opay-removebg-preview.png" alt="">
+                    </div>
+                    <h1>Opay</h1>
+                </div>
+            </div>
+            <div class="withdraw_wrapper" id="withdrawMenu">
+                <div class="previousbtn" onclick="exitWithdrawMenu()">
+                    <i class='bx bx-chevron-left'></i>
+                    <h1>Withdraw</h1>
+                </div>
+                <hr>
+                <div class="box boxHoverEffect">
+                    <div class="opay_lister"><i class='bx bx-broadcast'></i>
+                    </div>
+
+                    <div>
+
+                        <h5>Click here to find nearby <br> marchant or ATM</h5>
+
+                    </div>
+                    <i class='bx bx-chevron-right'></i>
+                </div>
+                <div class="myads">
+                    <div class="subs_details">
+                        <h1>Am a <span>Website<br> Developer</span></h1>
+                        <button>Follow me...</button>
+
+                        <div class="links">
+                            <a href="https://www.tiktok.com/@websitetiktoker?"><i style="color: black;"
+                                    class='bx bxl-tiktok'></i></a>
+                            <a href="https://youtube.com/@WebsiteYoutuber"><i style="color: red;"
+                                    class='bx bxl-youtube'></i></a>
+                            <a href=""><i style="color: rgb(0, 255, 255);" class='bx bxl-facebook'></i></a>
+                            <a href="https://github.com/WebsiteGithuber"><i style="color: black;"
+                                    class='bx bxl-github'></i></a>
+                        </div>
+
+                    </div>
+                    <div class="image">
+                        <img src="/images/image.png" alt="image">
+                    </div>
+                </div>
+                <div class="bottom_layer">
+                    <div class="image">
+                        <img src="/images/opay-removebg-preview.png" alt="">
+                    </div>
+                    <h1>Opay</h1>
+                </div>
+            </div>
+            <div class="me_wrapper" id="meMenu">
+                <div class="previousbtn">
+                    <div class="profile_pics"></div>
+                    <div class="greetings">
+                        <b style="font-family: Roboto; letter-spacing: 2px;">Hello,</b>
+                        <p> @WebsiteTiktoker</p>
+                    </div>
+                    <div class="exitBtn" onclick="exitMeMenu()"><i class='bx bx-x'></i></div>
+                    
+
+                </div>
+                <hr>
+                <div class="box boxHoverEffect">
+                    <div class="lister"><i class='bx bx-male-female'></i></div>
+
+                    <div class="list">
+                        <h4>Friends</h4>
+                        <p>Chat with friends & Family</p>
+
+                    </div>
+                    <i class='bx bx-chevron-right'></i>
+                </div>
+                <div class="box boxHoverEffect">
+                    <div class="lister"><i class='bx bxs-coin-stack'></i></div>
+
+                    <div class="list">
+                        <h4>Total Assets</h4>
+                        <p>View your total assets and earnings</p>
+
+                    </div>
+                    <i class='bx bx-chevron-right'></i>
+                </div>
+                <div class="box boxHoverEffect">
+                    <div class="lister"><i class='bx bx-reset'></i></div>
+
+                    <div class="list">
+                        <h4>Transaction History</h4>
+                        <p>View details of transactions</p>
+
+                    </div>
+                    <i class='bx bx-chevron-right'></i>
+                </div>
+
+                <div class="box boxHoverEffect">
+                    <div class="lister"><i class='bx bxs-thermometer'></i></div>
+
+                    <div class="list">
+                        <h4>Account Limits</h4>
+                        <p>View your transaction limits</p>
+
+                    </div>
+                    <i class='bx bx-chevron-right'></i>
+                </div>
+                <div class="box boxHoverEffect">
+                    <div class="lister"><i class='bx bx-id-card'></i></div>
+
+                    <div class="list">
+                        <h4>Bank Card/Account</h4>
+                        <p>Add payment option</p>
+
+                    </div>
+                    <i class='bx bx-chevron-right'></i>
+                </div>
+                <div class="box boxHoverEffect">
+                    <div class="lister"><i class='bx bx-dollar-circle'></i></div>
+
+                    <div class="list">
+                        <h4>Commission</h4>
+                        <p>View commission records</p>
+
+                    </div>
+                    <i class='bx bx-chevron-right'></i>
+                </div>
+                <div class="box boxHoverEffect">
+                    <div class="lister"><i class='bx bx-question-mark'></i></div>
+
+                    <div class="list">
+                        <h4>FAQ</h4>
+                        <p>Questions and Answers</p>
+
+                    </div>
+                    <i class='bx bx-chevron-right'></i>
+                </div>
+                <div class="box boxHoverEffect">
+                    <div class="lister"><i class='bx bx-phone-call'></i></div>
+
+                    <div class="list">
+                        <h4>Customer Service</h4>
+                        <p>Get support from us</p>
+
+                    </div>
+                    <i class='bx bx-chevron-right'></i>
+                </div>
+                
+                <div class="bottom_layer">
+                    <h1>Opay</h1>
+                </div>
+                
+            </div>
+
+        </div>
+    </div>
+
+
+
+    <script src="script.js"></script>
+</body>
+
+</html>

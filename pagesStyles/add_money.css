@@ -1,0 +1,98 @@
+.add_money_wrapper {
+    display: none;
+    width: min(100%, 360px);
+    height: 100%;
+    margin-inline: auto;
+    background-color: var(--secondary-color);
+    border-radius: 40px;
+    transform: translate(0, -32%);
+    border: 1px solid transparent;
+    position: relative;  
+    box-shadow: inset 1px 1px 15px var(--shadow-color);
+    animation: addMoney .3s linear;
+}
+
+.add_money_wrapper .box {
+    width: 80%;
+    height: 80px;
+    margin: auto;
+    border: 1px solid var(--shadow-color);
+    border-radius: 5px;
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.add_money_wrapper .opay_lister {
+    width: 40px;
+    height: 100%;
+    background: url(/images/opay-removebg-preview.png);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    border: 2px solid transparent;
+    margin-left: 3px;
+}
+.add_money_wrapper .box div {
+    display: flex;
+    flex-direction: column;
+}
+
+.add_money_wrapper .box i {
+    font-size: 20px;
+    padding: 10px;
+    color: var(--primary-color);
+}
+
+.add_money_wrapper .box h4 {
+    font-family: Roboto, sans-serif;
+    color: var(--primary-color);
+    font-size: 12px;
+}
+
+.add_money_wrapper .box p {
+    font-size: 12px;
+    color: var(--primary-color);
+}
+
+
+.add_money_wrapper .ac_number_wrapper {
+    width: 80%;
+    display: flex;
+    flex-direction: row;
+    border: 1px solid transparent;
+    margin-inline: auto;
+    margin-bottom: 10px;
+    justify-content: space-between;
+    padding: 5px;
+}
+
+.add_money_wrapper .ac_number_wrapper .ac_number {
+    display: flex;
+    flex-direction: column;
+}
+.add_money_wrapper .ac_number_wrapper .ac_number p {
+    font-family: Roboto, sans-serif;
+    font-size: 12px;
+    opacity: .7;
+    color: var(--primary-color);
+}
+.add_money_wrapper .ac_number_wrapper .ac_number h2 {
+    font-family: Roboto, sans-serif;
+    color: var(--primary-color);
+}
+
+.add_money_wrapper .ac_number_wrapper button {
+    font-family: Roboto, sans-serif;
+    height: 20px;
+    border: .5px solid transparent;
+    color: var(--primary-color);
+    opacity: .7;
+    padding: 3px;
+    background-color: var(--secondary-color);
+    border-radius: 5px;
+}
+.add_money_wrapper .ac_number_wrapper button i {
+    color: var(--main-color);
+}
