@@ -53,7 +53,17 @@ body {
     opacity: .5;
     margin-inline: auto;
 }
-
+@media screen and (max-width: 600px) {
+    .opay {
+        width: 100%;
+        align-items: flex-start;
+        top: 2%;
+        position: absolute;
+    }
+    .opay::before {
+        display: none;
+    }
+}
 .app {
     width: min(95%, 360px);
     height: 90%;
