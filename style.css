@@ -35,7 +35,7 @@ body {
     height: 800px;
     width: min(80%, 1000px);
     border-radius: 40px;
-    background-color: var(--secondary-color);
+    background-color: white;
     overflow: hidden;
     display: flex;
     justify-content: center;
@@ -45,7 +45,7 @@ body {
 .opay::before {
     content: '';
     position: absolute;
-    background-color: var(--secondary-color);
+    background-color: white;
     height: 780px;
     width: min(78%, 980px);
     border-radius: 40px;
