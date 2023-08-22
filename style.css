@@ -285,7 +285,7 @@ body {
     width: 40px;
     border-radius: 50%;
     border: 1.5px solid var(--main-color);
-    background-color: var(--light-green);
+    background-color: var(--secondary-color);
     display: flex;
     justify-content: center;
     align-items: center;
